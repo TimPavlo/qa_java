@@ -14,10 +14,16 @@ public class FelineTest {
     }
 
     @Test
-    public void testEatMeat() throws Exception {
+    public void testEatMeatReturnsList() throws Exception {
         Feline feline = new Feline();
         List<String> food = feline.eatMeat();
         assertNotNull(food);
+    }
+
+    @Test
+    public void testEatMeatContainsMeat() throws Exception {
+        Feline feline = new Feline();
+        List<String> food = feline.eatMeat();
         assertTrue(food.contains("Животные"));
     }
 
